@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Contact Us - HGHMNDS.CO</title>
+
+    <!-- box-icons link-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- remix-icons link-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- google fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">HGHMNDS.CO</a>
+
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Shop</a>
+                <ul class="dropdown">
+                    <li><a href="tops.html">Tops</a></li>
+                    <li><a href="bottoms.html">Bottoms</a></li>
+                </ul>
+            </li>
+            <li><a href="stores.html">Stores</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- search bar -->
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <i class="ri-search-line"></i>
+        </div>
+        <!-- user icon-->
+        <i class="ri-user-line" id="user-icon"></i>
+        <!-- Log In / Sign Up Modal -->
+        <div class="user-modal" id="user-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Log in or Sign up?</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="login-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="login-password"
+                            placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn-login">Log In</button>
+                </form>
+                <p>Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a></p>
+
+                <!-- Sign Up Form (Hidden by Default) -->
+                <form id="signup-form" style="display: none;">
+                    <div class="form-group">
+                        <label for="signup-name">Name</label>
+                        <input type="text" id="signup-name" name="signup-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="signup-email" placeholder="Enter your email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="signup-password"
+                            placeholder="Create a password" required>
+                    </div>
+                    <button type="submit" class="btn-signup">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="#" id="switch-to-login">Log In</a></p>
+            </div>
+        </div>
+        <!-- cart icon -->
+        <i class="ri-shopping-cart-line" id="cart-icon">
+            <span id="cart-count">0</span>
+        </i>
+        <!-- cart-->
+        <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+            <!-- content -->
+            <div class="cart-content">
+            </div>
+            <!-- total -->
+            <div class="total">
+                <div class="subtotal-title">
+                    <span>Subtotal:</span>
+                    <span class="subtotal-price">$0.00</span>
+                </div>
+                <div class="tax-title">
+                    <span>Tax VAT (10%):</span>
+                    <span class="tax-price">$0.00</span>
+                </div>
+                <div class="total-title">
+                    <span>Total:</span>
+                    <span class="total-price">$0.00</span>
+                </div>
+            </div>
+            <!-- buy button -->
+            <button type="button" class="btn-buy">Buy Now</button>
+            <!-- cart close-->
+            <i class='bx bx-x' id="close-cart"></i>
+        </div>
+        <!-- menu icon-->
+        <i class="ri-menu-line menu-icon" id="menu-icon"></i>        
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="contact-description">Have questions or need assistance? Reach out to us!</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-container">
+            <!-- About Us Section -->
+            <div class="footer-box">
+                <h3>About Us</h3>
+                <a href="#">Our Story</a>
+                <a href="stores.html">Stores</a>
+                <a href="#">Careers</a>
+            </div>
+            <!-- Customer Service Section -->
+            <div class="footer-box">
+                <h3>Customer Service</h3>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <!-- Social Media Section -->
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/HGHMNDS/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/highmindsclothing/" target="_blank"><i
+                            class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://www.tiktok.com/@hghmndsclothing_" target="_blank"><i class='bx bxl-tiktok'></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; 2025 HGHMNDS.CO. All rights reserved.</p>
+        </div>
+    </section>
+
+
+    <!-- Chat Box -->
+    <div class="chat-box">
+        <div class="chat-header">
+            <h3>Chat</h3>
+            <i class='bx bx-x close-chat'></i>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages">
+                <!-- Messages will appear here -->
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-btn"><i class='bx bx-send'></i></button>
+        </div>
+    </div>
+    <!-- Chat Icon -->
+    <div class="chat-icon">
+        <i class='bx bx-message-rounded-dots'></i>
+    </div>
+
+    <!-- JS Link -->
+    <script src="script.js"></script>
+</body>
+
+</html>

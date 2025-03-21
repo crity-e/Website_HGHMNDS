@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Contact Us - HGHMNDS.CO</title>
+
+    <!-- box-icons link-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- remix-icons link-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- google fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">HGHMNDS.CO</a>
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Shop</a>
+                <ul class="dropdown">
+                    <li><a href="tops.html">Tops</a></li>
+                    <li><a href="bottoms.html">Bottoms</a></li>
+                </ul>
+            </li>
+            <li><a href="stores.html">Stores</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- search bar -->
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <i class="ri-search-line"></i>
+        </div>
+        <!-- user icon-->
+        <i class="ri-user-line" id="user-icon"></i>
+        <!-- Log In / Sign Up Modal -->
+        <div class="user-modal" id="user-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Log in or Sign up?</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="login-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="login-password"
+                            placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn-login">Log In</button>
+                </form>
+                <p>Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a></p>
+
+                <!-- Sign Up Form (Hidden by Default) -->
+                <form id="signup-form" style="display: none;">
+                    <div class="form-group">
+                        <label for="signup-name">Name</label>
+                        <input type="text" id="signup-name" name="signup-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="signup-email" placeholder="Enter your email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="signup-password"
+                            placeholder="Create a password" required>
+                    </div>
+                    <button type="submit" class="btn-signup">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="#" id="switch-to-login">Log In</a></p>
+            </div>
+        </div>
+        <!-- cart icon -->
+        <i class="ri-shopping-cart-line" id="cart-icon">
+            <span id="cart-count">0</span>
+        </i>
+        <!-- cart-->
+        <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+            <!-- content -->
+            <div class="cart-content">
+            </div>
+            <!-- total -->
+            <div class="total">
+                <div class="subtotal-title">
+                    <span>Subtotal:</span>
+                    <span class="subtotal-price">$0.00</span>
+                </div>
+                <div class="tax-title">
+                    <span>Tax VAT (10%):</span>
+                    <span class="tax-price">$0.00</span>
+                </div>
+                <div class="total-title">
+                    <span>Total:</span>
+                    <span class="total-price">$0.00</span>
+                </div>
+            </div>
+            <!-- buy button -->
+            <button type="button" class="btn-buy">Buy Now</button>
+            <!-- cart close-->
+            <i class='bx bx-x' id="close-cart"></i>
+        </div>
+        <!-- menu icon-->
+        <i class="ri-menu-line menu-icon" id="menu-icon"></i>
+    </header>
+
+    <!-- Stores Section -->
+    <section class="stores-section">
+        <h1>Stores</h1>
+
+        <div class="store-container">
+            <div class="store-location">
+                <h2>MAKATI</h2>
+                <p>Unit C7 Guadalupe Arcadia Square, JP RIZAL EXTENSION. Brgy. Cembo, Makati</p>
+                <a href="https://www.google.com/maps/place/HGHMNDS+MAKATI/@14.5677361,121.0486933,17z/data=!4m14!1m7!3m6!1s0x3397c911ac012fb1:0xa1235f7b6ef6d7b!2sHGHMNDS+MAKATI!8m2!3d14.5677361!4d121.0486933!16s%2Fg%2F11hdj_hls2!3m5!1s0x3397c911ac012fb1:0xa1235f7b6ef6d7b!8m2!3d14.5677361!4d121.0486933!16s%2Fg%2F11hdj_hls2?entry=ttu&g_ep=EgoyMDI1MDMxNi4wIKXMDSoASAFQAw%3D%3D"
+                    class="locate-btn" target="_blank">Locate</a>
+            </div>
+
+            <div class="store-location">
+                <h2>CUBAO</h2>
+                <p>710 Edsa, Cubao northbound, Quezon City</p>
+                <a href="https://www.google.com/maps/place/HGHMNDS/@14.6263427,121.04829,17z/data=!3m1!4b1!4m6!3m5!1s0x3397b7bac7340001:0xd2f044b1e9853935!8m2!3d14.6263427!4d121.04829!16s%2Fg%2F11y1gb46ql?entry=ttu&g_ep=EgoyMDI1MDMxNi4wIKXMDSoASAFQAw%3D%3D"
+                    class="locate-btn" target="_blank">Locate</a>
+            </div>
+
+            <div class="store-location">
+                <h2>MANILA</h2>
+                <p>1049 Unit 3C, Arellano Ave. Corner Ayala St. Malate, Manila</p>
+                <a href="https://www.google.com/maps/place/HGHMNDS+MALATE/@14.5655937,120.9954985,17z/data=!3m1!4b1!4m6!3m5!1s0x3397c945a1c6af8d:0x5cbc23b17ef768f5!8m2!3d14.5655937!4d120.9980734!16s%2Fg%2F11g1_sxbqt?entry=tts&shorturl=1"
+                    class="locate-btn" target="_blank">Locate</a>
+            </div>
+
+            <div class="store-location">
+                <h2>MUNTINLUPA</h2>
+                <p>KM 31, National Road. Port Area, Tunasan, Muntinlupa</p>
+                <a href="https://www.google.com/maps?q=KM+31,+National+Road.+Port+Area,+Tunasan,+Muntinlupa"
+                    class="locate-btn" target="_blank">Locate</a>
+            </div>
+
+            <div class="store-location">
+                <h2>CALOOCAN</h2>
+                <p>406 A. Main St. Brgy. 15, Caloocan City</p>
+                <a href="https://www.google.com/maps/place/HGHMNDS+CALOOCAN/@14.6493795,120.9704654,17z/data=!3m1!4b1!4m6!3m5!1s0x3397b5594291711d:0x6b602eed7a6ebcba!8m2!3d14.6493795!4d120.9730403!16s%2Fg%2F11t8tl0ycd?entry=tts&shorturl=1"
+                    class="locate-btn" target="_blank">Locate</a>
+            </div>
+
+            <div class="store-location">
+                <h2>PARANAQUE</h2>
+                <p>8459 Dr. Arcadia Santos. Ave. Sucat, Paranaque</p>
+                <a href="https://www.google.com/maps/place/HGHMNDS+PARA%C3%91AQUE/@14.4586021,121.0297067,17z/data=!3m1!4b1!4m6!3m5!1s0x3397cf5c772f8c9b:0x6a366e898b9cb089!8m2!3d14.4586021!4d121.0322816!16s%2Fg%2F11kc2m2m28?entry=tts&shorturl=1"
+                    class="locate-btn" target="_blank">Locate</a>
+            </div>
+
+            <div class="store-location">
+                <h2>CAVITE</h2>
+                <p>MCG Bldg, KM17 Emilio Aguinaldo Highway Bacoor, Cavite</p>
+                <a href="https://www.google.com/maps/place/HGHMNDS+CAVITE/@14.4496299,120.9518392,17z/data=!3m1!4b1!4m6!3m5!1s0x3397cd2bffe49999:0x40de7d3d6a4bd2b7!8m2!3d14.4496299!4d120.9544141!16s%2Fg%2F11svj096xy?entry=tts&shorturl=1"
+                    class="locate-btn" target="_blank">Locate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-container">
+            <!-- About Us Section -->
+            <div class="footer-box">
+                <h3>About Us</h3>
+                <a href="#">Our Story</a>
+                <a href="stores.html">Stores</a>
+                <a href="#">Careers</a>
+            </div>
+            <!-- Customer Service Section -->
+            <div class="footer-box">
+                <h3>Customer Service</h3>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <!-- Social Media Section -->
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/HGHMNDS/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/highmindsclothing/" target="_blank"><i
+                            class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://www.tiktok.com/@hghmndsclothing_" target="_blank"><i class='bx bxl-tiktok'></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; 2025 HGHMNDS.CO. All rights reserved.</p>
+        </div>
+    </section>
+
+
+    <!-- JS Link -->
+    <script src="script.js"></script>
+</body>
+
+</html>

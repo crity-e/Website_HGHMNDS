@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Checkout - HGHMNDS.CO</title>
+
+    <!-- Box Icons Link -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">HGHMNDS.CO</a>
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Shop</a>
+                <ul class="dropdown">
+                    <li><a href="tops.html">Tops</a></li>
+                    <li><a href="bottoms.html">Bottoms</a></li>
+                </ul>
+            </li>
+            <li><a href="stores.html">Stores</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout">
+        <div class="checkout-container">
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="cart-content">
+                    <!-- Cart items will be dynamically inserted here -->
+                </div>
+                <div class="total">
+                    <div class="subtotal-title">
+                        <span>Subtotal:</span>
+                        <span class="subtotal-price">$0.00</span>
+                    </div>
+                    <div class="tax-title">
+                        <span>Tax VAT (10%):</span>
+                        <span class="tax-price">$0.00</span>
+                    </div>
+                    <div class="total-title">
+                        <span>Total:</span>
+                        <span class="total-price">$0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shipping and Payment Form -->
+            <div class="checkout-form">
+                <h2>Shipping & Payment Details</h2>
+                <form id="checkout-form">
+                    <!-- Shipping Details -->
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Shipping Address</label>
+                        <input type="text" id="address" name="address" placeholder="Enter your shipping address"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">Zip Code</label>
+                        <input type="text" id="zip" name="zip" placeholder="Enter your zip code" required>
+                    </div>
+
+                    <!-- Payment Method Selection -->
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <input type="radio" id="credit-card" name="payment-method" value="credit-card" checked>
+                                <label for="credit-card">
+                                    <i class='bx bx-credit-card'></i>
+                                    <span>Credit Card</span>
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="paypal" name="payment-method" value="paypal">
+                                <label for="paypal">
+                                    <i class='bx bxl-paypal'></i>
+                                    <span>PayPal</span>
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="apple-pay" name="payment-method" value="apple-pay">
+                                <label for="apple-pay">
+                                    <i class='bx bxl-apple'></i>
+                                    <span>Apple Pay</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Credit Card Details (Visible by Default) -->
+                    <div class="credit-card-details">
+                        <div class="form-group">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" name="card-number" placeholder="Enter your card number"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required>
+                        </div>
+                    </div>
+
+                    <!-- PayPal and Apple Pay Placeholder (Hidden by Default) -->
+                    <div class="paypal-details" style="display: none;">
+                        <p>You will be redirected to PayPal to complete your payment.</p>
+                    </div>
+                    <div class="apple-pay-details" style="display: none;">
+                        <p>You will be redirected to Apple Pay to complete your payment.</p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-submit">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>About Us</h3>
+                <a href="#">Our Story</a>
+                <a href="stores.html">Stores</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="footer-box">
+                <h3>Customer Service</h3>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/HGHMNDS/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/highmindsclothing/" target="_blank"><i
+                            class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://www.tiktok.com/@hghmndsclothing_" target="_blank"><i class='bx bxl-tiktok'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 HGHMNDS.CO. All rights reserved.</p>
+        </div>
+    </section>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <script>
+        // Load cart items from localStorage
+        function loadCartForCheckout() {
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            const cartContent = document.querySelector(".cart-content");
+            let subtotal = 0;
+
+            cartItems.forEach((item) => {
+                const cartBox = document.createElement("div");
+                cartBox.classList.add("cart-box");
+
+                const cartBoxContent = `
+                    <img src="${item.productImg}" alt="" class="cart-img">
+                    <div class="detail-box">
+                        <div class="cart-product-title">${item.title}</div>
+                        <div class="cart-price">${item.price}</div>
+                        <div class="cart-quantity">Qty: ${item.quantity}</div>
+                    </div>`;
+                cartBox.innerHTML = cartBoxContent;
+                cartContent.appendChild(cartBox);
+
+                // Calculate subtotal
+                const price = parseFloat(item.price.replace("$", ""));
+                subtotal += price * item.quantity;
+            });
+
+            // Update totals
+            const taxRate = 0.10;
+            const tax = subtotal * taxRate;
+            const total = subtotal + tax;
+
+            document.querySelector(".subtotal-price").innerText = `$${subtotal.toFixed(2)}`;
+            document.querySelector(".tax-price").innerText = `$${tax.toFixed(2)}`;
+            document.querySelector(".total-price").innerText = `$${total.toFixed(2)}`;
+        }
+
+        // Load cart on page load
+        document.addEventListener("DOMContentLoaded", loadCartForCheckout);
+
+        // Handle form submission
+        document.getElementById("checkout-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Order placed successfully!");
+            localStorage.removeItem("cartItems"); // Clear cart after order
+            window.location.href = "index.html"; // Redirect to home page
+        });
+
+        
+    </script>
+</body>
+
+</html>
