@@ -193,27 +193,29 @@ const searchInput = document.getElementById("search-input");
 const productBoxes = document.querySelectorAll(".product-box");
 const noResultsMessage = document.querySelector(".no-results");
 
-searchInput.addEventListener("input", (e) => {
-    const searchTerm = e.target.value.toLowerCase();
-    let foundResults = false;
+if (searchInput && productBoxes && noResultsMessage) {
+    searchInput.addEventListener("input", (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        let foundResults = false;
 
-    productBoxes.forEach((productBox) => {
-        const productTitle = productBox.querySelector(".product-title").innerText.toLowerCase();
-        if (productTitle.includes(searchTerm)) {
-            productBox.style.display = "block"; // Show the product
-            foundResults = true;
+        productBoxes.forEach((productBox) => {
+            const productTitle = productBox.querySelector(".product-title").innerText.toLowerCase();
+            if (productTitle.includes(searchTerm)) {
+                productBox.style.display = "block"; // Show the product
+                foundResults = true;
+            } else {
+                productBox.style.display = "none"; // Hide the product
+            }
+        });
+
+        // Show or hide the "No Results Found" message
+        if (foundResults) {
+            noResultsMessage.style.display = "none"; // Hide the message if results are found
         } else {
-            productBox.style.display = "none"; // Hide the product
+            noResultsMessage.style.display = "block"; // Show the message if no results are found
         }
     });
-
-    // Show or hide the "No Results Found" message
-    if (foundResults) {
-        noResultsMessage.style.display = "none"; // Hide the message if results are found
-    } else {
-        noResultsMessage.style.display = "block"; // Show the message if no results are found
-    }
-});
+}
 
 // Hamburger Menu
 const menuIcon = document.getElementById("menu-icon");
