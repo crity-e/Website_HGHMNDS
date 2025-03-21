@@ -1040,7 +1040,46 @@ header {
         font-size: 0.9rem;
     }
 }
+/* Mobile Search Icon */
+.search-icon-mobile {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}
 
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.search-container input {
+    width: 250px;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Hide search input by default on mobile */
+@media (max-width: 768px) {
+    .search-container input {
+        display: none;
+        width: 100%;
+    }
+
+    .search-icon-mobile {
+        display: block; /* Show the search icon on mobile */
+    }
+
+    .search-container.active input {
+        display: block; /* Show the input when active */
+    }
+}
 
 /* Checkout Page */
 .checkout {

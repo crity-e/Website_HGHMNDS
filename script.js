@@ -193,29 +193,46 @@ const searchInput = document.getElementById("search-input");
 const productBoxes = document.querySelectorAll(".product-box");
 const noResultsMessage = document.querySelector(".no-results");
 
-if (searchInput && productBoxes && noResultsMessage) {
-    searchInput.addEventListener("input", (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        let foundResults = false;
+searchInput.addEventListener("input", (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    let foundResults = false;
 
-        productBoxes.forEach((productBox) => {
-            const productTitle = productBox.querySelector(".product-title").innerText.toLowerCase();
-            if (productTitle.includes(searchTerm)) {
-                productBox.style.display = "block"; // Show the product
-                foundResults = true;
-            } else {
-                productBox.style.display = "none"; // Hide the product
-            }
-        });
-
-        // Show or hide the "No Results Found" message
-        if (foundResults) {
-            noResultsMessage.style.display = "none"; // Hide the message if results are found
+    productBoxes.forEach((productBox) => {
+        const productTitle = productBox.querySelector(".product-title").innerText.toLowerCase();
+        if (productTitle.includes(searchTerm)) {
+            productBox.style.display = "block"; // Show the product
+            foundResults = true;
         } else {
-            noResultsMessage.style.display = "block"; // Show the message if no results are found
+            productBox.style.display = "none"; // Hide the product
         }
     });
-}
+
+    // Show or hide the "No Results Found" message
+    if (foundResults) {
+        noResultsMessage.style.display = "none"; // Hide the message if results are found
+    } else {
+        noResultsMessage.style.display = "block"; // Show the message if no results are found
+    }
+});
+
+// Search Toggle for Mobile
+const searchIconMobile = document.getElementById("search-icon-mobile");
+const searchContainer = document.querySelector(".search-container");
+
+searchIconMobile.onclick = () => {
+    searchContainer.classList.toggle("active");
+    if (searchContainer.classList.contains("active")) {
+        document.getElementById("search-input").focus(); // Focus on the input when expanded
+    }
+};
+
+// Close search when clicking outside
+document.addEventListener("click", (e) => {
+    if (!searchContainer.contains(e.target) && !searchIconMobile.contains(e.target)) {
+        searchContainer.classList.remove("active");
+    }
+});
+
 
 // Hamburger Menu
 const menuIcon = document.getElementById("menu-icon");
